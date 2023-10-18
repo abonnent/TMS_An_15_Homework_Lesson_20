@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".AddNoteActivity">
+
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/note_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="top"
+        android:hint="@string/note_text"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="@id/title_edit"
+        app:layout_constraintStart_toStartOf="@id/title_edit"
+        app:layout_constraintTop_toBottomOf="@id/title_edit" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/note_important"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/note_important"
+        app:layout_constraintEnd_toEndOf="@id/text_edit"
+        app:layout_constraintStart_toStartOf="@id/text_edit"
+        app:layout_constraintTop_toBottomOf="@id/text_edit" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_save"
+        app:layout_constraintEnd_toEndOf="@id/note_important"
+        app:layout_constraintStart_toStartOf="@id/note_important"
+        app:layout_constraintTop_toBottomOf="@id/note_important" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TMS_An_15_Homework_Lesson_20</string>
+
+    <string name="note_title">Заголовок</string>
+    <string name="note_text">Описание</string>
+    <string name="note_save">Сохранить</string>
+    <string name="note_empty">Нет заметок</string>
+    <string name="note_important">Важная заметка</string>
+    <string name="note_add">Добавить запись</string>
+    <string name="note_send">Отправить через: </string>
+</resources>
