@@ -24,20 +24,18 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, REQUEST)
         }
 
-        adapter.setOnItemClickListener(object : OnNoteItemClickListener {
-            override fun onItemClick(note: Note) {
-                val message = "Заметка:\n${note.title}\n${note.text}"
+        adapter.setOnItemClickListener { note ->
+            val message = "Заметка:\n${note.title}\n${note.text}"
 
-                val sendIntent = Intent().apply {
-                    action = Intent.ACTION_SEND
-                    type = "text/plain"
-                    putExtra(Intent.EXTRA_TEXT, message)
-                }
-
-                val chooser = Intent.createChooser(sendIntent, getString(R.string.note_send))
-                startActivity(chooser)
+            val sendIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TEXT, message)
             }
-        })
+
+            val chooser = Intent.createChooser(sendIntent, getString(R.string.note_send))
+            startActivity(chooser)
+        }
 
         with(binding) {
             recyclerView.isVisible = false
